@@ -34,13 +34,13 @@ export function AddTask() {
         const newTask = {
             id: generateUniqueId(),
             text: task,
-            checked: false, // Устанавливать начальное состояние как "не выполнено"
+            checked: false, 
         };
 
         const newTasks = [...tasks, newTask];
         dispatch({ type: 'ADD_TASK', payload: newTask });
 
-        saveTasks(newTasks); // Сохраняем задачи в AsyncStorage
+        saveTasks(newTasks);
 
         setTask('');
     };

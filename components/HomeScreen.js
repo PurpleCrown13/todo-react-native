@@ -2,12 +2,12 @@ import React, { useEffect, useRef } from 'react';
 import { View, Text, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
 import BouncyCheckbox from "react-native-bouncy-checkbox";
 import { useTaskContext } from '../TaskContext';
-import { useTheme } from '../ThemeContext'; // Импорт контекста темы
+import { useTheme } from '../ThemeContext'; 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as Animatable from 'react-native-animatable';
 
 export function HomeScreen() {
-    const theme = useTheme(); // Использование контекста темы
+    const theme = useTheme();
     const { isDarkMode } = theme;
     const backgroundColor = isDarkMode ? '#1B1B1B' : '#F5F5F5';
     const textColor = isDarkMode ? 'white' : 'black';
@@ -15,7 +15,7 @@ export function HomeScreen() {
     const checkboxFillColor = isDarkMode ? "#A82C36" : "#2C1118";
 
     const { tasks, dispatch } = useTaskContext();
-    const animatableRefs = useRef({}); // Объект для хранения ссылок на анимируемые элементы
+    const animatableRefs = useRef({});
 
     const handleRemoveTaskWithAnimation = (taskId) => {
         const animatableRef = animatableRefs.current[taskId];
@@ -51,7 +51,7 @@ export function HomeScreen() {
             ) : (
                 tasks.map((task, index) => (
                     <Animatable.View
-                        ref={(ref) => (animatableRefs.current[task.id] = ref)} // Сохраняем ссылку на анимируемый элемент
+                        ref={(ref) => (animatableRefs.current[task.id] = ref)} 
                         key={task.id}
                         style={[
                             {

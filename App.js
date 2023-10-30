@@ -21,11 +21,10 @@ export default function App() {
 }
 
 function AppContent() {
-  const { tasks } = useTaskContext(); // Получаем задачи из контекста
+  const { tasks } = useTaskContext(); 
   const [taskCount, setTaskCount] = useState(tasks.length);
 
   useEffect(() => {
-    // Обновляем состояние счетчика задач при изменении задач в контексте
     setTaskCount(tasks.length);
   }, [tasks]);
 
