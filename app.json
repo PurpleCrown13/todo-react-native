@@ -4,7 +4,7 @@
     "slug": "TodoByBH",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/do.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -19,12 +19,18 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/do.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "just.test.xd"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8f2575c2-276b-470a-8c2f-f94a4ed7c151"
+      }
     }
   }
 }
